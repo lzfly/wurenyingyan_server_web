@@ -13,6 +13,8 @@ require_once 'Qianliyan/Util/MemCached.php';
 require_once 'Qianliyan/IGeTui/PushMessage.php';
 require_once 'Qianliyan/IGeTui/PushNotification.php';
 
+date_default_timezone_set('rpc');
+
 /**
  * @package Qianliyan_App_Server
  */

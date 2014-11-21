@@ -34,14 +34,14 @@ class SmartCenterServer extends Qianliyan_App_Server
 	 * ---------------------------------------------------------------------------------------------
 	 * > 接口说明：智能中心初始化接口
 	 * <code>
-	 * URL地址：/smartcenter/init
+	 * URL地址：/smartCenter/init
 	 * 参数#1：sn，类型：STRING，必须：YES，示例：wkfowkjd
 	 * 参数#2：push_clientid，类型：STRING，必须：YES
 	 * 提交方式：POST
 	 * </code>
 	 * ---------------------------------------------------------------------------------------------
 	 * @title 智能中心初始化接口
-	 * @action /smartcenter/init
+	 * @action /smartCenter/init
 	 * @params sn '' STRING
 	 * @params push_clientid '' STRING
 	 * @method POST
@@ -87,14 +87,14 @@ class SmartCenterServer extends Qianliyan_App_Server
 	 * ---------------------------------------------------------------------------------------------
 	 * > 接口说明：智能中心登录接口
 	 * <code>
-	 * URL地址：/smartcenter/login
+	 * URL地址：/smartCenter/login
 	 * 参数#1：sn，类型：STRING，必须：YES，示例：wkfowkjd
 	 * 参数#2：pass，类型：STRING，必须：YES，示例：888888
 	 * 提交方式：POST
 	 * </code>
 	 * ---------------------------------------------------------------------------------------------
 	 * @title 智能中心登录接口
-	 * @action /smartcenter/login
+	 * @action /smartCenter/login
 	 * @params sn '' STRING
 	 * @params pass '' STRING
 	 * @method POST
@@ -136,12 +136,12 @@ class SmartCenterServer extends Qianliyan_App_Server
 	 * ---------------------------------------------------------------------------------------------
 	 * > 接口说明：智能中心列表接口
 	 * <code>
-	 * URL地址：/smartcenter/smartcenterList
+	 * URL地址：/smartCenter/smartcenterList
 	 * 提交方式：GET
 	 * </code>
 	 * ---------------------------------------------------------------------------------------------
 	 * @title 智能中心列表接口
-	 * @action /smartcenter/smartcenterList
+	 * @action /smartCenter/smartcenterList
 	 * @method get
 	 */
 	public function smartcenterListAction ()
@@ -159,13 +159,13 @@ class SmartCenterServer extends Qianliyan_App_Server
 	 * ---------------------------------------------------------------------------------------------
 	 * > 接口说明：查看智能中心信息接口
 	 * <code>
-	 * URL地址：/smartcenter/smartcenterView
+	 * URL地址：/smartCenter/smartcenterView
 	 * 提交方式：POST
 	 * 参数#1：sn，类型：STRING，必须：YES
 	 * </code>
 	 * ---------------------------------------------------------------------------------------------
 	 * @title 查看智能中心信息接口
-	 * @action /smartcenter/smartcenterView
+	 * @action /smartCenter/smartcenterView
 	 * @params sn '' STRING
 	 * @method post
 	 */
@@ -188,7 +188,7 @@ class SmartCenterServer extends Qianliyan_App_Server
 	 * ---------------------------------------------------------------------------------------------
 	 * > 接口说明：更新智能中心信息接口
 	 * <code>
-	 * URL地址：/smartcenter/smartcenterEdit
+	 * URL地址：/smartCenter/smartcenterEdit
 	 * 提交方式：POST
 	 * 参数#1：sn，类型：STRING，必须：YES
 	 * 参数#2：key，类型：STRING，必须：YES
@@ -196,7 +196,7 @@ class SmartCenterServer extends Qianliyan_App_Server
 	 * </code>
 	 * ---------------------------------------------------------------------------------------------
 	 * @title 更新智能中心信息接口
-	 * @action /smartcenter/smartcenterEdit
+	 * @action /smartCenter/smartcenterEdit
 	 * @params sn '' STRING
 	 * @params key '' STRING
 	 * @params val '' STRING
@@ -229,14 +229,14 @@ class SmartCenterServer extends Qianliyan_App_Server
 	 * ---------------------------------------------------------------------------------------------
 	 * > 接口说明：新建智能中心接口
 	 * <code>
-	 * URL地址：/smartcenter/smartcenterCreate
+	 * URL地址：/smartCenter/smartcenterCreate
 	 * 提交方式：POST
 	 * 参数#1：sn，类型：INT，必须：YES
 
 	 * </code>
 	 * ---------------------------------------------------------------------------------------------
 	 * @title 新建智能中心接口
-	 * @action /smartcenter/smartcenterCreate
+	 * @action /smartCenter/smartcenterCreate
 	 * @params sn '' STRING
 	 * @method post
 	 */
