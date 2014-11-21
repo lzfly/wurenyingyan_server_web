@@ -33,7 +33,7 @@ define('__APP_VERSION', '1.0');
 /**
  * URL relative constants
  */
-define('__HOST_SERVER', 'http://127.0.0.1:8007');
+define('__HOST_SERVER', 'http://182.92.156.183:8007');
 define('__HOST_WEBSITE', 'http://182.92.156.183:8008');
 
 /**
@@ -63,7 +63,7 @@ define('__WWW_5LIANPAI', realpath(__WWW_DIR . '/website/5lianpai'));
 /**
  * memcache config
  */
-define('__MEMCACHE_IP', '127.0.0.1');
+define('__MEMCACHE_IP', '182.92.156.183');
 define('__MEMCACHE_PORT', 11211);
 
 

@@ -41,8 +41,8 @@ class Core_Notice extends Qianliyan_Dao_Core
 	 */
 	public function getUnreadCount($smartcenterSN, $userId)
 	{
-		$sql1 = "SELECT COUNT(ID) AS UNREADCOUNT FROM NOTICE WHERE NOT EXISTS (SELECT NOTICE_CODE FROM NOTICE_STATUS WHERE USER_ID=";
-		$sql2 = " AND NOTICE_CODE=NOTICE.CODE) AND SMARTCENTER_SN=";
+		$sql1 = "SELECT COUNT(ID) AS UNREADCOUNT FROM $this->t1 WHERE NOT EXISTS (SELECT NOTICE_CODE FROM notice_status WHERE USER_ID=";
+		$sql2 = " AND NOTICE_CODE=$this->t1.CODE) AND SMARTCENTER_SN=";
 		$cmdText = $sql1 . $userId . $sql2 . "'" . $smartcenterSN . "'";
 		$result = $this->dbr()->fetchAll($cmdText);
 		return $result;
@@ -50,7 +50,7 @@ class Core_Notice extends Qianliyan_Dao_Core
 	
 	public function getPageList($smartcenterSN, $userId, $startId, $count, $type, $status)
 	{
-		$sql = "SELECT a.*, b.USER_ID FROM (SELECT * FROM NOTICE WHERE SMARTCENTER_SN='" . $smartcenterSN . "'";
+		$sql = "SELECT a.*, b.USER_ID FROM (SELECT * FROM $this->t1 WHERE SMARTCENTER_SN='" . $smartcenterSN . "'";
 		if ($startId > 0)
 		{
 			$sql .= (" AND ID<" . $startId);
@@ -59,7 +59,7 @@ class Core_Notice extends Qianliyan_Dao_Core
 		{
 			$sql .= (" AND TYPE='" .$type . "'");
 		}
-		$sql .= ") a LEFT JOIN (SELECT * FROM NOTICE_STATUS WHERE USER_ID=";
+		$sql .= ") a LEFT JOIN (SELECT * FROM notice_status WHERE USER_ID=";
 		$sql .= ($userId . ") b ON a.CODE=b.NOTICE_CODE");
 		if ($status == 0)
 		{
