@@ -1,2 +1,2 @@
 # wurenyingyan_server_web
-web server base on PHP
+PHP web server base on www.gitthub/jameschz/hush
